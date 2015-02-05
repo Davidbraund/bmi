@@ -9,6 +9,7 @@ def main():
     print_bmi(bmi)
     print_category(bmi)
 
+
 def get_float(text):
     """ We only want a float value """
 
@@ -22,13 +23,16 @@ def get_float(text):
 
     return float_value
 
+
 def calculate_bmi(weight, length):
     bmi = weight / (length * length)
 
     return bmi
 
+
 def print_bmi(bmi):
     print("Your BMI is {0:2.1f}".format(bmi))
+
 
 def print_category(bmi):
     if(bmi < 18.5):
@@ -39,6 +43,7 @@ def print_category(bmi):
         print("You are overweight")
     else:
         print("You are obese")
+
 
 if __name__ == '__main__':
     main()
