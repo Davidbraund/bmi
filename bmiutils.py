@@ -1,15 +1,36 @@
-def bmi_float(val):
+def bmi_float(value):
+    """ Converts input to float
+
+    Args:
+        value - The value to be converted
+    Return:
+        float of value if conversion was possible, 0.0 otherwise
+    """
+
     try:
-        return float(val)
+        return float(value)
     except:
         return 0.0
 
 
 def bmi(length, weight):
-    l = bmi_float(length)
+    """ Calculates BMI
+
+    Args:
+        length - length in cm
+        weight - weight in kg
+    Return:
+        Result of calculation or 0 if division by zero would have occured
+    """
+
+    l = (bmi_float(length) / 100) # cm -> m conversion
     w = bmi_float(weight)
 
-    return (w / (l * l))
+    # Test if we would have done division by zero
+    if(l == 0):
+        return 0
+    else:
+        return (w / (l * l))
 
 
 def bmi_verdict(bmi):

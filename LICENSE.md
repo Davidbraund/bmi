@@ -1,4 +1,4 @@
-Copyright (c) 2014, Joakim Palm
+Copyright (c) 2014-2015, Joakim Palm
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
